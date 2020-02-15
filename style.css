@@ -1,0 +1,388 @@
+
+/* Here customized pac man font is imported, that is being used in the page texts.  */
+@font-face {
+    font-family:"prstartk";
+    src: url("prstartk.ttf") format("truetype");
+  }
+
+/* Body styling is done here. */
+body {
+    background: #000000;
+    font-family: prstartk;
+    overflow-x: hidden; 
+    color: #ffffff;
+}
+
+/* This selector aligns the text in nav to center and adjusts width to 100%. */
+nav {
+    text-align: center;
+}
+
+/* In this selector the color, font, decoration and padding is set for the text. */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* Here when mouse is hovered over nav elements, color is changed according the transition. */
+a:hover {
+    color: #ffd300;
+    transition: .5s;
+}
+
+/* This is an id selector that sets appearance of pac man logo. */
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    height: 55%;
+    margin-top: 50px;
+}
+
+.row {
+    padding-top: 150px;
+}
+
+.column {
+    float: left;
+}
+
+/* This class selector defines the attributes for Pacman chasing left. */
+.pacman {  
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0%;
+    animation: chaseLeft 8s infinite linear;
+}
+
+/* This class selector defines the attributes for Pinky ghost. */
+.pinky {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 0%;
+    opacity: 0;
+    animation: ghost 8s infinite linear;
+    animation-delay: 0.75s;
+}
+
+/* This class selector defines the attributes for Inky ghost. */
+.inky {
+    height: 50px;
+    width: 50px;
+    right: 0%;
+    opacity: 0;
+    position: absolute;
+    animation: ghost 8s infinite linear;
+    animation-delay: 1.15s;
+}
+
+/* This class selector defines the attributes for Blinky ghost. */
+.blinky {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    right: 0;
+    position: absolute;
+    animation: ghost 8s infinite linear;
+    animation-delay: 1.55s;
+}
+
+/* This class selector defines the attributes for Clyde ghost. */
+.clyde {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    right: 0;
+    position: absolute;
+    animation: ghost 8s infinite linear;
+    animation-delay: 1.95s;
+}
+
+/* This class selector defiense attributes and animation for INSERT COIN text. */
+.blinking{
+    padding: 100px;
+    font-family: prstartk;
+    text-align: center;
+    animation:blinkingText 1s infinite;
+}
+
+/* This is a psuedo-element to represent ending of a section. */
+section::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    border: 2px dotted #f9ed3f;
+}
+
+
+/* This is styling for "ready" heading. */
+#ready {
+    margin-top: 100px;
+    color: #ffd300;
+    text-align: center;
+}
+
+/* This selector is styling scores' text for first h3*/
+h3:nth-child(2) {
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+}
+
+
+
+/* This styles the list items. */
+ul {
+    list-style: none;
+}
+
+/* This class selector styles the list items. */
+.container {
+    width: 100%;
+    text-align: center; 
+}
+
+/* These selectors style the table items. */
+table {
+    margin: auto;
+    display: inline-block; 
+    padding: 10%;
+    padding-top: 0%;
+}
+
+th {
+    padding: 20px 100px;
+}
+
+td {
+    padding: 5px;
+}
+/* Following pseudo-selectors styles the list items individualy. */
+tr:nth-child(1) {
+    color: #ffffff;
+    padding: 20px;
+    font-size: 20px;
+}
+
+tr:nth-child(2) {
+    color: #ffa002;
+    padding: 100px;
+    font-size: 20px;
+}
+
+tr:nth-child(3) {
+    color: #ff0401;
+    padding: 5px;
+    font-size: 20px;
+}
+
+tr:nth-child(4) {
+    color: #01f8f8;
+    padding: 5px;
+    font-size: 20px;
+}
+
+tr:nth-child(5) {
+    color: #ff60b0;
+    padding: 5px;
+    font-size: 20px;
+}
+
+tr:nth-child(6) {
+    color: #ffa002;
+    padding: 5px;
+    font-size: 20px;
+}
+
+tr:nth-child(7) {
+    color: #ff0401;
+    padding: 5px;
+    font-size: 20px;
+}
+
+tr:nth-child(8) {
+    color: #01f8f8;
+    padding: 5px;
+    font-size: 20px;
+    
+}
+
+tr:nth-child(9) {
+    color: #ff60b0;
+    padding: 5px;
+    font-size: 20px;
+}
+
+tr:nth-child(10) {
+    color: #ffa002;
+    padding: 5px;
+    font-size: 20px;
+}
+
+tr:nth-child(11) {
+    color: #ff0401;
+    padding: 5px;
+    font-size: 20px;
+}
+
+/* This class selector defines the attributes for Pacman chasing right. */
+.pacman1 {  
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0%;
+    opacity: 0;
+    animation: chaseRight 8s infinite linear;
+    animation-delay: 2s;
+}
+
+/* This class selector defines the attributes for frozen Pinky. */
+.pinkyFrozen {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 0%;
+    opacity: 0;
+    animation: ghostFrozen 8s infinite linear;
+}
+
+/* This class selector defines the attributes for frozen Inky. */
+.inkyFrozen {
+    height: 50px;
+    width: 50px;
+    left: 0%;
+    opacity: 0;
+    position: absolute;
+    animation: ghostFrozen 8s infinite linear;
+    animation-delay: 0.4s;
+}
+
+/* This class selector defines the attributes for frozen Blinky. */
+.blinkyFrozen {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    left: 0;
+    position: absolute;
+    animation: ghostFrozen 8s infinite linear;
+    animation-delay: 0.8s;
+}
+
+/* This class selector defines the attributes for frozen Clyde. */
+.clydeFrozen {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    left: 0;
+    position: absolute;
+    animation: ghostFrozen 8s infinite linear;
+    animation-delay: 1.2s;
+}
+
+/* This selector styles the first line of p. */
+p::first-line {
+    color: #ffd300;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    padding: 5%;
+    text-align: center;
+    font-size: 35px;
+}
+
+ul {
+    display: inline-block;
+}
+
+.ghostImgs {
+    margin-left: 35%;
+}
+
+.PTS {
+    text-align: center;
+    padding:30px;
+}
+/*Following pseudo-selectors style the list items in players section".*/
+li:nth-of-type(1) {
+    color: #ff0401;
+}
+
+li:nth-of-type(2) {
+    color: #ff60b0;
+}
+
+li:nth-of-type(3) {
+    color: #01f8f8;
+}
+
+li:nth-of-type(4) {
+    color: #ffa002;
+}
+/* Keyframes for animation. */
+
+ @keyframes chaseLeft { 
+    0% {
+        right: 0%;
+        transform: translateX(100%);
+    }
+    100% {
+        right: 100%;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes ghost {
+    0% {
+        right: 0%;
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    100% {
+        right: 100%;
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}
+
+@keyframes chaseRight { 
+    0% {
+        left: 0%;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        transform: translateX(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes ghostFrozen {
+    0% {
+        left: 0%;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        transform: translateX(100%);
+        opacity: 1;
+    }
+}
+@keyframes blinkingText{
+    0% { color:#ffffff; }
+    50% { color:#ffffff; }
+    60% { color: transparent; }
+    100% { color: transparent; }
+}
+
+
+
+
+
